@@ -25,9 +25,9 @@ export const firebaseConfig = {
     messagingSenderId: "280293903444"
   };
 
-  export const myFirebaseAuthConfig = {
+  export const FirebaseAuthConfig = {
   provider: AuthProviders.Google,
-  method: AuthMethods.Redirect
+  method: AuthMethods.Popup
 };
 
 @NgModule({
@@ -42,7 +42,7 @@ export const firebaseConfig = {
     MdToolbarModule,
     MdInputModule,
     MdButtonModule,
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, FirebaseAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
