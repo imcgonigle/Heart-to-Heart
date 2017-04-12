@@ -33,4 +33,8 @@ export class AppComponent {
   logout() {
     this.af.auth.logout();
   }
+
+  addResource() {
+    console.log("form submitted");
+  }
 }
