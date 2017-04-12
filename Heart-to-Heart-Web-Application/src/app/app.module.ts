@@ -10,7 +10,20 @@ import { MdToolbarModule, MdInputModule, MdButtonModule } from '@angular/materia
 // hammerjs used for gesture support
 import 'hammerjs';
 
+// Firebase
+import { AngularFireModule } from 'angularfire2';
+
 import { AppComponent } from './app.component';
+
+// Firebase config
+export const firebaseConfig = {
+    apiKey: "AIzaSyA9Fg0a8Xbkp1kiB3bxbR3tCq66eCKSa6I",
+    authDomain: "heart-to-heart-d364b.firebaseapp.com",
+    databaseURL: "https://heart-to-heart-d364b.firebaseio.com",
+    projectId: "heart-to-heart-d364b",
+    storageBucket: "heart-to-heart-d364b.appspot.com",
+    messagingSenderId: "280293903444"
+  };
 
 @NgModule({
   declarations: [
@@ -23,7 +36,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     MdToolbarModule,
     MdInputModule,
-    MdButtonModule
+    MdButtonModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
