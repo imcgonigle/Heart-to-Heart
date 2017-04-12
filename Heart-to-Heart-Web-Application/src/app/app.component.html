@@ -12,7 +12,7 @@
 
 <main *ngIf="user; else notLoggedIn" class="content-main ">
     <md-card class="add-item-card">
-        <form (ngSubmit)="addResource(); resourceForm.reset()" #resourceForm="ngForm" class="add-resource-form">
+        <form (ngSubmit)="addResource(); resourceForm.reset()" #resourceForm="ngForm" class="add-resource-form" novalidate>
             <md-input-container>
                 <input type="text" [(ngModel)]="model.name" id="name" name="name" mdInput required placeholder="Resource Name">
             </md-input-container>
@@ -24,6 +24,7 @@
             </md-input-container>
             <button *ngIf="!resourceForm.pristine" md-button [disabled]="!resourceForm.form.valid" type="submit">Add</button>
         </form>
+        {{resourceForm.focus | json}}
     </md-card>
     <div class="resources-container">
         <md-card class="resource-card" *ngFor="let resource of resources | async ">
