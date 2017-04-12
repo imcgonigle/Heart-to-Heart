@@ -9,6 +9,8 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class AppComponent {
   title = 'Heart to Heart';
-
-  constructor(af: AngularFire ){}
+  items: FirebaseListObservable<any>
+  constructor(af: AngularFire ){
+    this.items = af.database.list('/items');
+  }
 }
