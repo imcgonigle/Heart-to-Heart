@@ -6,12 +6,15 @@
 .content-main {
     max-width: 980px;
     margin: auto;
-    padding: 3rem;
 }
 
 md-card {
     max-width: 400px;
-    margin: auto;
+    margin: 1rem auto;
+}
+
+.add-item-card {
+    margin: 2rem auto;
 }
 
 .card-avatar-image {
