@@ -1,16 +1,16 @@
 <md-toolbar color="primary">
     <span>{{title}}</span>
     <span style="flex: 1 1 auto;" class="md-toolbar-spacer"></span>
-    <div *ngIf="user.google">
-        <span>{{ (af.auth | async)?.google.email }}</span>
+    <div *ngIf="user; else loginButton">
+        <span class="text-username">{{ (af.auth | async)?.google.email }}</span>
         <button md-button (click)="logout()">Logout</button>
     </div>
-    <button md-button (click)="login()">Login</button>
+    <ng-template #loginButton>
+        <button md-button (click)="login()">Login</button>
+    </ng-template>
 </md-toolbar>
-<ul *ngIf="user.google">
+<ul *ngIf="user">
     <li class="text" *ngFor="let item of items | async">
         {{item.$value}}
     </li>
 </ul>
-
-{{(af.auth | async | json)}}

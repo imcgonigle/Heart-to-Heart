@@ -10,7 +10,7 @@ import { AngularFire, FirebaseListObservable} from 'angularfire2';
 })
 export class AppComponent {
   title = 'Heart to Heart';
-  user = {};
+  user: Object;
   items: FirebaseListObservable<any[]>;
 
   constructor(public af: AngularFire){
@@ -21,7 +21,7 @@ export class AppComponent {
         this.user = user;
       } 
       else {
-        this.user = {}
+        this.user = undefined;
       }
     })
   }
