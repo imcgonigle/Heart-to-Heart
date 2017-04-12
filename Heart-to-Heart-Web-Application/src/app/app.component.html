@@ -9,8 +9,12 @@
         <button md-button (click)="login()">Login</button>
     </ng-template>
 </md-toolbar>
-<ul *ngIf="user">
-    <li class="text" *ngFor="let item of items | async">
-        {{item.$value}}
-    </li>
-</ul>
+
+<main class="content-main">
+
+    <ul *ngIf="user">
+        <li class="text" *ngFor="let item of items | async">
+            {{item.$value}}
+        </li>
+    </ul>
+</main>

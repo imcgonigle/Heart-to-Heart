@@ -2,3 +2,9 @@
     font-size: 1rem;
     font-weight: lighter;
 }
+
+.content-main {
+    max-width: 980px;
+    margin: auto;
+    padding: 3rem;
+}
