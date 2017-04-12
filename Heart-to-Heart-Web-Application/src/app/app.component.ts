@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// AngularFire2 
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Heart to Heart';
+
+  constructor(af: AngularFire ){}
 }
