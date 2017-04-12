@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular Material
-import { MdToolbarModule, MdInputModule, MdButtonModule } from '@angular/material';
+import { MdToolbarModule, MdInputModule, MdButtonModule, MdCardModule } from '@angular/material';
 
 // hammerjs used for gesture support
 import 'hammerjs';
@@ -42,6 +42,7 @@ export const firebaseConfig = {
     MdToolbarModule,
     MdInputModule,
     MdButtonModule,
+    MdCardModule,
     AngularFireModule.initializeApp(firebaseConfig, FirebaseAuthConfig)
   ],
   providers: [],
