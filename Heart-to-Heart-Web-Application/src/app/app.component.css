@@ -1,3 +1,8 @@
+.login-message {
+    padding: 3rem;
+    text-align: center;
+}
+
 .text-username {
     font-size: 1rem;
     font-weight: lighter;
@@ -8,12 +13,18 @@
     margin: auto;
 }
 
-md-card {
-    max-width: 400px;
-    margin: 1rem auto;
+.resources-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    max-width: 200px;
+    margin: 1rem;
 }
 
 .add-item-card {
+    max-width: 480px;
     margin: 2rem auto;
 }
 

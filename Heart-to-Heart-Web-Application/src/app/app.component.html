@@ -9,30 +9,39 @@
         <button md-button (click)="login()">Login</button>
     </ng-template>
 </md-toolbar>
-<md-card>
-    <form class="add-resource-form">
-        <md-input-container>
-            <input mdInput placeholder="Resource Name">
-        </md-input-container>
-        <md-input-container>
-            <input mdInput placeholder="URL">
-        </md-input-container>
-        <md-input-container>
-            <input mdInput placeholder="Category">
-        </md-input-container>
-        <button md-button (click)="addResource()">Add</button>
-    </form>
-</md-card>
 
-<main *ngIf="user" class="content-main">
-    <md-card *ngFor="let resource of resources | async">
-        <md-card-header>
-            <div md-card-avatar class="card-avatar-image"></div>
-            <md-card-title>{{resource.name}}</md-card-title>
-            <md-card-subtitle>{{resource.category}}</md-card-subtitle>
-        </md-card-header>
-        <md-card-content>
-            <a href=" {{resource.url}} ">{{resource.url}}</a>
-        </md-card-content>
+<main *ngIf="user; else notLoggedIn" class="content-main ">
+    <md-card class="add-item-card">
+        <form (ngSubmit)="addResource(); resourceForm.reset()" #resourceForm="ngForm" class="add-resource-form">
+            <md-input-container>
+                <input type="text" [(ngModel)]="model.name" id="name" name="name" mdInput required placeholder="Resource Name">
+            </md-input-container>
+            <md-input-container *ngIf="!resourceForm.pristine">
+                <input type="url" [(ngModel)]="model.url" id="url" name="url" mdInput required placeholder="URL">
+            </md-input-container>
+            <md-input-container *ngIf="!resourceForm.pristine">
+                <input type="text" [(ngModel)]="model.category" id="category" name="category" mdInput required placeholder="Category">
+            </md-input-container>
+            <button *ngIf="!resourceForm.pristine" md-button [disabled]="!resourceForm.form.valid" type="submit">Add</button>
+        </form>
     </md-card>
+    <div class="resources-container">
+        <md-card class="resource-card" *ngFor="let resource of resources | async ">
+            <md-card-header>
+                <div md-card-avatar class="card-avatar-image "></div>
+                <md-card-title>{{resource.name}}</md-card-title>
+                <md-card-subtitle>{{resource.category}}</md-card-subtitle>
+            </md-card-header>
+            <md-card-content>
+                <a href=" {{resource.url}} ">{{resource.url}}</a>
+            </md-card-content>
+            <md-card-actions *ngIf="resource.user == user.google.email">
+                <button md-button (click)="deleteResource(resource)">DELETE</button>
+            </md-card-actions>
+        </md-card>
+
+    </div>
 </main>
+<ng-template #notLoggedIn>
+    <h1 class="login-message">Log in to start adding resources.</h1>
+</ng-template>
