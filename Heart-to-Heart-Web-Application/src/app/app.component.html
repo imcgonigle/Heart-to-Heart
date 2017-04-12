@@ -9,6 +9,20 @@
         <button md-button (click)="login()">Login</button>
     </ng-template>
 </md-toolbar>
+<md-card>
+    <form class="add-resource-form">
+        <md-input-container>
+            <input mdInput placeholder="Resource Name">
+        </md-input-container>
+        <md-input-container>
+            <input mdInput placeholder="URL">
+        </md-input-container>
+        <md-input-container>
+            <input mdInput placeholder="Category">
+        </md-input-container>
+        <button md-button (click)="addResource()">Add</button>
+    </form>
+</md-card>
 
 <main *ngIf="user" class="content-main">
     <md-card *ngFor="let resource of resources | async">
