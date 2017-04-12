@@ -18,3 +18,7 @@ md-card {
     background-image: url(/assets/images/blank-user.png);
     background-size: cover;
 }
+
+md-input-container {
+    width: 100%;
+}
