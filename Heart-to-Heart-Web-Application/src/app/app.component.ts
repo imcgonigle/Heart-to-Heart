@@ -10,10 +10,20 @@ import { AngularFire, FirebaseListObservable} from 'angularfire2';
 })
 export class AppComponent {
   title = 'Heart to Heart';
+  user = {};
   items: FirebaseListObservable<any[]>;
 
   constructor(public af: AngularFire){
     this.items = af.database.list('/items');
+
+    af.auth.subscribe(user => {
+      if (user) {
+        this.user = user;
+      } 
+      else {
+        this.user = {}
+      }
+    })
   }
 
   login() {
