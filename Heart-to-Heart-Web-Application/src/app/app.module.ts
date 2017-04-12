@@ -11,7 +11,7 @@ import { MdToolbarModule, MdInputModule, MdButtonModule } from '@angular/materia
 import 'hammerjs';
 
 // Firebase
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { AppComponent } from './app.component';
 
@@ -25,6 +25,11 @@ export const firebaseConfig = {
     messagingSenderId: "280293903444"
   };
 
+  export const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+};
+
 @NgModule({
   declarations: [
     AppComponent
@@ -37,7 +42,7 @@ export const firebaseConfig = {
     MdToolbarModule,
     MdInputModule,
     MdButtonModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
