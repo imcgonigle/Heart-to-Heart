@@ -13,11 +13,12 @@
 <main *ngIf="user" class="content-main">
     <md-card *ngFor="let resource of resources | async">
         <md-card-header>
+            <div md-card-avatar class="card-avatar-image"></div>
             <md-card-title>{{resource.name}}</md-card-title>
             <md-card-subtitle>{{resource.category}}</md-card-subtitle>
         </md-card-header>
         <md-card-content>
-            <a href="{{resource.url}}">{{resource.url}}</a>
+            <a href=" {{resource.url}} ">{{resource.url}}</a>
         </md-card-content>
     </md-card>
 </main>
