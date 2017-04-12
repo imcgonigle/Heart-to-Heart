@@ -10,11 +10,14 @@
     </ng-template>
 </md-toolbar>
 
-<main class="content-main">
-
-    <ul *ngIf="user">
-        <li class="text" *ngFor="let item of items | async">
-            {{item.$value}}
-        </li>
-    </ul>
+<main *ngIf="user" class="content-main">
+    <md-card *ngFor="let resource of resources | async">
+        <md-card-header>
+            <md-card-title>{{resource.name}}</md-card-title>
+            <md-card-subtitle>{{resource.category}}</md-card-subtitle>
+        </md-card-header>
+        <md-card-content>
+            <a href="{{resource.url}}">{{resource.url}}</a>
+        </md-card-content>
+    </md-card>
 </main>

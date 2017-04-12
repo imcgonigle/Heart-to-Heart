@@ -11,10 +11,10 @@ import { AngularFire, FirebaseListObservable} from 'angularfire2';
 export class AppComponent {
   title = 'Heart to Heart';
   user: Object;
-  items: FirebaseListObservable<any[]>;
+  resources: FirebaseListObservable<any[]>;
 
   constructor(public af: AngularFire){
-    this.items = af.database.list('/items');
+    this.resources = af.database.list('/resources');
 
     af.auth.subscribe(user => {
       if (user) {
