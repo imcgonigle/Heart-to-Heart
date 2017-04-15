@@ -1,20 +1,20 @@
 npm-debug.log
-
-
-*.js.map
-
-tmp/
-typings/
-
 .DS_Store
+
+# Generated Directories
+/node_modules/
 /platforms/
 /lib/
+/hooks/
+/tmp/
+/typings/
+/dist/
 
+# Generated Files
 /app/**/*.js
 /app/**/*.map
+*.js.map
 !/app/tns_modules/**/*.js
-/node_modules/
-hooks/
 
 *.tgz
 
@@ -24,5 +24,21 @@ hooks/
 
 Telerik.keystore
 
+# Google Auth
 GoogleService-Info.plist
 google-services.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
