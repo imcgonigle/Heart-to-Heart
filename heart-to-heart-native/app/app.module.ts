@@ -7,6 +7,8 @@ import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 
+import { LandingComponent } from "./pages/landing/landing.component";
+
 import { MainComponent } from "./pages/main/main.component";
 
 @NgModule({
@@ -21,6 +23,7 @@ import { MainComponent } from "./pages/main/main.component";
         AppComponent,
         ItemsComponent,
         ItemDetailComponent,
+        LandingComponent,
         MainComponent
     ],
     providers: [
