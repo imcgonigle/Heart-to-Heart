@@ -2,5 +2,5 @@
     <Label class="h1" style.color="black" text="{{ name }}"></Label>
     <Label text="{{ description }}"></Label>
     <Button (tap)="goto('/resources/' + name + '/videos')" text="Videos"></Button>
-    <Button text="Pictures"></Button>
+    <Button (tap)="goto('/resources/' + name + '/pictures')" text="Pictures"></Button>
 </StackLayout>
