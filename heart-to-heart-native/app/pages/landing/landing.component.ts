@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Router } from '@angular/router';
 
 @Component({
   selector: "ns-landing",
@@ -6,4 +7,7 @@ import { Component } from '@angular/core'
   styleUrls: ["./pages/landing/landing-common.css", "./pages/landing/landing.css"]
 })
 
-export class LandingComponent {}
+export class LandingComponent {
+  constructor(private router: Router){}
+  
+}
