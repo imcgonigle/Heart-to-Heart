@@ -7,8 +7,8 @@ import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 
-import { LandingComponent } from "./pages/landing/landing.component";
-import { MainComponent } from "./pages/main/main.component";
+import { TitleComponent } from "./pages/title/title.component";
+import { HomeComponent } from "./pages/home/home.component";
 import { EmotionComponent } from './pages/emotion/emotion.component';
 import { HeartrateCheckerComponent } from './pages/heartrate-checker/heartrate-checker.component';
 import { ResourceListComponent } from './pages/resource/resource-list/resource-list.component';
@@ -27,8 +27,8 @@ import { EmojiGameComponent } from './pages/emoji-game/emoji-game.component';
         AppComponent,
         ItemsComponent,
         ItemDetailComponent,
-        LandingComponent,
-        MainComponent,
+        TitleComponent,
+        HomeComponent,
         EmotionComponent,
         HeartrateCheckerComponent,
         ResourceDetailComponent,

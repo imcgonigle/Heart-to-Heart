@@ -2,12 +2,12 @@ import { Component } from '@angular/core'
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'ns-landing',
-  templateUrl: './pages/landing/landing.component.html',
-  styleUrls: ['./pages/landing/landing-common.css', './pages/landing/landing.css']
+  selector: 'ns-title',
+  templateUrl: './pages/title/title.html',
+  styleUrls: ['./pages/title/title-common.css', './pages/title/title.css']
 })
 
-export class LandingComponent {
+export class TitleComponent {
   constructor(private router: Router){}
 
   getStarted() {

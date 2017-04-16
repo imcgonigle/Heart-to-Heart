@@ -4,12 +4,12 @@ import { Color } from 'color';
 import { Page } from 'ui/page';
 
 @Component({
-  selector: 'ns-main',
-  templateUrl: './pages/main/main.html',
-  styleUrls: ["./pages/main/main-common.css", "./pages/main/main.css"]
+  selector: 'ns-home',
+  templateUrl: './pages/home/home.html',
+  styleUrls: ["./pages/home/home-common.css", "./pages/home/home.css"]
 })
 
-export class MainComponent {
+export class HomeComponent {
   constructor(private page: Page, private router: Router) {}
   ngOnInit() {
     this.page.backgroundColor = new Color("#efefef");

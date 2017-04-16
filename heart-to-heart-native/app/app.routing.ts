@@ -5,10 +5,8 @@ import { Routes } from "@angular/router";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 
-import { LandingComponent } from "./pages/landing/landing.component";
-
-import { MainComponent } from "./pages/main/main.component";
-
+import { TitleComponent } from "./pages/title/title.component";
+import { HomeComponent } from "./pages/home/home.component";
 import { HeartrateCheckerComponent } from "./pages/heartrate-checker/heartrate-checker.component";
 import { EmojiGameComponent } from './pages/emoji-game/emoji-game.component';
 import { EmotionComponent } from './pages/emotion/emotion.component';
@@ -19,8 +17,8 @@ const routes: Routes = [
     { path: "", redirectTo: "/main", pathMatch: "full" },
     { path: "items", component: ItemsComponent },
     { path: "item/:id", component: ItemDetailComponent },
-    { path: "landing", component: LandingComponent },
-    { path: "main", component: MainComponent },
+    { path: "landing", component: TitleComponent },
+    { path: "main", component: HomeComponent },
     { path: "heartrate", component: HeartrateCheckerComponent },
     { path: "emotion/:name", component: EmotionComponent },
     { path: 'resources/:type', component: ResourceDetailComponent },
