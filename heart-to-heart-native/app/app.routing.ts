@@ -21,7 +21,7 @@ const routes: Routes = [
     { path: "main", component: HomeComponent },
     { path: "heartrate", component: HeartrateCheckerComponent },
     { path: "emotion/:name", component: EmotionComponent },
-    { path: 'resources/:emotion/:type', component: ResourceListComponent },
+    { path: 'resources/:emotion/:section', component: ResourceListComponent },
     { path: 'resource/:id', component: ResourceDetailComponent},
     { path: 'emoji', component: EmojiGameComponent }
 ];
