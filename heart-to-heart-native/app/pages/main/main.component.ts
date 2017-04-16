@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Color } from 'color';
+import { Page } from 'ui/page';
 
 @Component({
   selector: 'ns-main',
@@ -6,4 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ["./pages/main/main-common.css", "./pages/main/main.css"]
 })
 
-export class MainComponent {}
+export class MainComponent {
+  constructor(private page: Page) {}
+  ngOnInit() {
+    this.page.backgroundColor = new Color("#efefef");
+  }
+}
