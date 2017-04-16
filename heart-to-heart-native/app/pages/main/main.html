@@ -3,15 +3,15 @@
         <StackLayout (tap)="goto('/emotion/relax')" row="0" style.backgroundColor="yellow">
             <Label text="Relax"></Label>
         </StackLayout>
-        <StackLayout row="1" style.backgroundColor="pink">
+        <StackLayout (tap)="goto('/emoji')" row="1" style.backgroundColor="pink">
             <Label text="Emoji Game"></Label>
         </StackLayout>
     </GridLayout>
     <GridLayout rows="*, 2*, *" col="1">
-        <StackLayout row="0" style.backgroundColor="red">
+        <StackLayout (tap)="goto('/emotion/happy')" row="0" style.backgroundColor="red">
             <Label text="Happy"></Label>
         </StackLayout>
-        <StackLayout row="1" style.backgroundColor="green">
+        <StackLayout (tap)="goto('/emotion/satisfying')" row="1" style.backgroundColor="green">
             <Label text="Satisfying"></Label>
         </StackLayout>
         <StackLayout (tap)="goto('/heartrate')" row="2" style.backgroundColor="blue">
