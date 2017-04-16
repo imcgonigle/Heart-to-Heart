@@ -17,7 +17,7 @@ const routes: Routes = [
     { path: "item/:id", component: ItemDetailComponent },
     { path: "landing", component: LandingComponent },
     { path: "main", component: MainComponent },
-    { path: "heartrate-checker", component: HeartrateCheckerComponent}
+    { path: "heartrate", component: HeartrateCheckerComponent}
 ];
 
 @NgModule({
