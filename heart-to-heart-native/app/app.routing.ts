@@ -10,7 +10,7 @@ import { LandingComponent } from "./pages/landing/landing.component";
 import { MainComponent } from "./pages/main/main.component";
 
 const routes: Routes = [
-    { path: "", redirectTo: "/landing", pathMatch: "full" },
+    { path: "", redirectTo: "/main", pathMatch: "full" },
     { path: "items", component: ItemsComponent },
     { path: "item/:id", component: ItemDetailComponent },
     { path: "landing", component: LandingComponent },
