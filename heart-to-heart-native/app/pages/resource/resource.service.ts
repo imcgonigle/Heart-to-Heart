@@ -31,7 +31,7 @@ export class ResourceService {
 
   getResources(type: string): Resource[]{
     return this.resources.filter(resource =>{
-      return resource.type == type;
+      return resource.type === type;
     });
   }
 

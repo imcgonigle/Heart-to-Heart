@@ -1,1 +1,8 @@
-<Label text="ResourceListComponent"> </Label>
+<StackLayout class="page">
+    <Label class="h2" text="{{title}}"></Label>
+    <ListView [items]="resources" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['/resource', item.id]" [text]="item.title" class="list-group-item"></Label>
+        </ng-template>
+    </ListView>
+</StackLayout>
