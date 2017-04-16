@@ -15,5 +15,8 @@ export class MainComponent {
     this.page.backgroundColor = new Color("#efefef");
   }
 
+  goto(route: string) {
+    this.router.navigate([route]);
+  }
   
 }
