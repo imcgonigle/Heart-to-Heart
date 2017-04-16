@@ -20,7 +20,7 @@ export class EmotionComponent {
   ){}
 
   ngOnInit(): void{
-    this.name = this.route.snapshot.params['name'].toUpperCase();
+    this.name = this.route.snapshot.params['name'];
     this.description = `This is the ${this.name} page`;
     this.page.backgroundColor = new Color('#88dd66');
   }
