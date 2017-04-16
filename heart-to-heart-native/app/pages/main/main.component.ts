@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Color } from 'color';
 import { Page } from 'ui/page';
 
@@ -9,8 +10,10 @@ import { Page } from 'ui/page';
 })
 
 export class MainComponent {
-  constructor(private page: Page) {}
+  constructor(private page: Page, private router: Router) {}
   ngOnInit() {
     this.page.backgroundColor = new Color("#efefef");
   }
+
+  
 }
