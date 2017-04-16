@@ -33,7 +33,7 @@ export class ResourceListComponent {
     this.section = this.route.snapshot.params['section'];
 
     this.title = `Here are some ${this.emotion} ${this.section}.`;
-    this.resources = this.resourceService.getResources('video');
+    this.resources = this.resourceService.getResources(this.section == 'videos' ? 'video' : 'picture' , this.emotion);
 
     this.page.backgroundColor = new Color('#333333');
   }
