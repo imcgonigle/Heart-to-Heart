@@ -9,6 +9,7 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 
 import { LandingComponent } from "./pages/landing/landing.component";
 import { MainComponent } from "./pages/main/main.component";
+import { EmotionComponent } from './pages/emotion/emotion.component';
 import { HeartrateCheckerComponent } from './pages/heartrate-checker/heartrate-checker.component';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { HeartrateCheckerComponent } from './pages/heartrate-checker/heartrate-c
         ItemDetailComponent,
         LandingComponent,
         MainComponent,
+        EmotionComponent,
         HeartrateCheckerComponent
     ],
     providers: [

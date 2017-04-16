@@ -10,6 +10,7 @@ import { LandingComponent } from "./pages/landing/landing.component";
 import { MainComponent } from "./pages/main/main.component";
 
 import { HeartrateCheckerComponent } from "./pages/heartrate-checker/heartrate-checker.component";
+import { EmotionComponent } from './pages/emotion/emotion.component';
 
 const routes: Routes = [
     { path: "", redirectTo: "/main", pathMatch: "full" },
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path: "item/:id", component: ItemDetailComponent },
     { path: "landing", component: LandingComponent },
     { path: "main", component: MainComponent },
-    { path: "heartrate", component: HeartrateCheckerComponent}
+    { path: "heartrate", component: HeartrateCheckerComponent },
+    { path: "emotion/:name", component: EmotionComponent }
 ];
 
 @NgModule({
