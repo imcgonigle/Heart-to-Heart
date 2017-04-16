@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Page } from 'ui/page';
+import { Color } from 'color';
 
 @Component({
   selector: 'ns-emotion',
@@ -9,10 +11,21 @@ import { ActivatedRoute } from '@angular/router';
 
 export class EmotionComponent {
   name: string;
+  description: string;
 
-  constructor(private route: ActivatedRoute){}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private page: Page
+  ){}
 
   ngOnInit(): void{
     this.name = this.route.snapshot.params['name'].toUpperCase();
+    this.description = `This is the ${this.name} page`;
+    this.page.backgroundColor = new Color('#88dd66');
+  }
+
+  goto(path: string){
+    this.router.navigate([path]);
   }
 }

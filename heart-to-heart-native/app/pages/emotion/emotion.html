@@ -1,1 +1,6 @@
-<Label text="EmotionComponent {{ name }}"></Label>
+<StackLayout>
+    <Label class="h1" style.color="black" text="{{ name }}"></Label>
+    <Label text="{{ description }}"></Label>
+    <Button (tap)="goto('/resources/' + name + '/videos')" text="Videos"></Button>
+    <Button text="Pictures"></Button>
+</StackLayout>
