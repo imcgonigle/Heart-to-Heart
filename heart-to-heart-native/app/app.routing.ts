@@ -9,12 +9,15 @@ import { LandingComponent } from "./pages/landing/landing.component";
 
 import { MainComponent } from "./pages/main/main.component";
 
+import { HeartrateCheckerComponent } from "./pages/heartrate-checker/heartrate-checker.component";
+
 const routes: Routes = [
     { path: "", redirectTo: "/main", pathMatch: "full" },
     { path: "items", component: ItemsComponent },
     { path: "item/:id", component: ItemDetailComponent },
     { path: "landing", component: LandingComponent },
-    { path: "main", component: MainComponent }
+    { path: "main", component: MainComponent },
+    { path: "heartrate-checker", component: HeartrateCheckerComponent}
 ];
 
 @NgModule({
