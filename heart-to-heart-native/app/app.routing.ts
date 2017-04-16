@@ -12,8 +12,8 @@ import { MainComponent } from "./pages/main/main.component";
 import { HeartrateCheckerComponent } from "./pages/heartrate-checker/heartrate-checker.component";
 import { EmojiGameComponent } from './pages/emoji-game/emoji-game.component';
 import { EmotionComponent } from './pages/emotion/emotion.component';
-import { ResourceListComponent } from './pages/emotion/resource-list/resource-list.component';
-import { ResourceDetailComponent } from './pages/emotion/resource-detail/resource-detail.component';
+import { ResourceListComponent } from './pages/resource/resource-list/resource-list.component';
+import { ResourceDetailComponent } from './pages/resource/resource-detail/resource-detail.component';
 
 const routes: Routes = [
     { path: "", redirectTo: "/main", pathMatch: "full" },

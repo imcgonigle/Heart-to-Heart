@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ns-emotion',
@@ -6,4 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./pages/emotion/emotion.css', './pages/emotion/emotion-common.css']
 })
 
-export class EmotionComponent {}
+export class EmotionComponent {
+  name: string;
+
+  constructor(private route: ActivatedRoute){}
+
+  ngOnInit(): void{
+    this.name = this.route.snapshot.params['name'].toUpperCase();
+  }
+}
