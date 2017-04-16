@@ -10,7 +10,11 @@ import { Page } from 'ui/page';
 })
 
 export class HomeComponent {
-  constructor(private page: Page, private router: Router) {}
+  constructor(
+    private page: Page, 
+    private router: Router
+  ) {}
+  
   ngOnInit() {
     this.page.backgroundColor = new Color("#efefef");
   }
