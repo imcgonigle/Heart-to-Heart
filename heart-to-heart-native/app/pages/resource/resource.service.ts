@@ -36,6 +36,6 @@ export class ResourceService {
   }
 
   getResource(id: number): Resource{
-    return this.resources.filter(resource => {resource.id == id})[0];
+    return this.resources.filter(resource => {return resource.id == id})[0];
   }
 }
