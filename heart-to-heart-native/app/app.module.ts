@@ -8,8 +8,8 @@ import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 
 import { LandingComponent } from "./pages/landing/landing.component";
-
 import { MainComponent } from "./pages/main/main.component";
+import { HeartrateCheckerComponent } from './pages/heartrate-checker/heartrate-checker.component';
 
 @NgModule({
     bootstrap: [
@@ -24,7 +24,8 @@ import { MainComponent } from "./pages/main/main.component";
         ItemsComponent,
         ItemDetailComponent,
         LandingComponent,
-        MainComponent
+        MainComponent,
+        HeartrateCheckerComponent
     ],
     providers: [
         ItemService
