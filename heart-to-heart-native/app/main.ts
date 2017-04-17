@@ -9,7 +9,7 @@ import firebase = require("nativescript-plugin-firebase");
 firebase.init({
   // Optionally pass in properties for database, authentication and cloud messaging,
   // see their respective docs.
-  persist: true,
+  persist: false,
   storageBucket: 'gs://heart-to-heart-d364b.appspot.com',
   onAuthStateChanged: (data: any) => {
     console.log(JSON.stringify(data))
