@@ -22,4 +22,9 @@ export class FirebaseService {
     })
   }
 
+  logout() {
+    BackendService.token = '';
+    firebase.logout();
+  }
+
 }
