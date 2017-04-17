@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import firebase = require("nativescript-plugin-firebase");
+
 import { Resource } from './resource';
 
 @Injectable()
@@ -33,6 +35,9 @@ export class ResourceService {
     return this.resources.filter(resource =>{
       return (resource.type === type && resource.category === category);
     });
+  }
+  getRes(type: string): any[] {
+    return 
   }
 
   getResource(id: number): Resource{
