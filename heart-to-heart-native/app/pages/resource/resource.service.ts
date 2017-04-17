@@ -36,9 +36,6 @@ export class ResourceService {
       return (resource.type === type && resource.category === category);
     });
   }
-  getRes(type: string): any[] {
-    return 
-  }
 
   getResource(id: number): Resource{
     return this.resources.filter(resource => {return resource.id == id})[0];
