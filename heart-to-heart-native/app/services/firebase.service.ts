@@ -9,7 +9,9 @@ import 'rxjs/add/operator/share';
 @Injectable()
 export class FirebaseService {
 
-  constructor(){}
+  constructor(
+    private ngZone: NgZone,
+  ){}
 
   login() {
     return firebase.login({
@@ -27,38 +29,46 @@ export class FirebaseService {
     firebase.logout();
   }
 
-  getResources(emotion: string, type: string) {
-    var onQueryEvent = function(result) {
-        // note that the query returns 1 match at a time
-        // in the order specified in the query
-        if (!result.error) {
-            console.log("Event type: " + result.type);
-            console.log("Key: " + result.key);
-            console.log("Value: " + JSON.stringify(result.value));
-        }
-    };
+  // getResources(emotion: string, type: string): Observable<any> {
+  //   return new Observable((observer: any) => {
+      
+  //     var onQueryEvent = function(result) {
+  //         console.log("Result: " + result)
+  //         if (!result.error) {
+  //             for(let index in result.value) {
+  //               observer.next(result['value'][index])
+  //             }
+  //         }
+          
+  //     };
 
-    var queryLocation = `/resources/${emotion}/${type}`
-    firebase.query(
-        onQueryEvent,
-        queryLocation,
-        {
-            singleEvent: true,
-            orderBy: {
-                type: firebase.QueryOrderByType.CHILD,
-                value: 'since'
-            },
-            limit: {
-                type: firebase.QueryLimitType.LAST,
-                value: 10
-            }
-        }
-    ).then( data => {
-      console.log(JSON.stringify(data.value))
-    }).catch(error => {
-      console.log("Error: " + error);
-      alert(error);
-    })
-  }
+  //     var queryLocation = `/resources/${emotion}/${type}`
+  //     firebase.query(
+  //         onQueryEvent,
+  //         queryLocation,
+  //         {
+  //             singleEvent: true,
+  //             orderBy: {
+  //                 type: firebase.QueryOrderByType.CHILD,
+  //                 value: 'since'
+  //             },
+  //             limit: {
+  //                 type: firebase.QueryLimitType.LAST,
+  //                 value: 10
+  //             }
+  //         }
+  //     ).then( data => {
+  //       // for( let resource of data) {
+  //       //   console.log("Resource: " + resource);
+  //       //   // observer.next(data.value[resource]);
+  //       // }
+  //       console.log("response is here: " + JSON.stringify(data))
+  //     }).catch(error => {
+  //       console.log("Error: " + error);
+  //       alert(error);
+  //     })
+
+  //   }).share()
+  // }
 
 }
