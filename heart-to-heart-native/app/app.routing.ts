@@ -14,11 +14,11 @@ import { ResourceListComponent } from './pages/resource/resource-list/resource-l
 import { ResourceDetailComponent } from './pages/resource/resource-detail/resource-detail.component';
 
 const routes: Routes = [
-    { path: "", redirectTo: "/main", pathMatch: "full" },
+    { path: "", redirectTo: "/title", pathMatch: "full" },
     { path: "items", component: ItemsComponent },
     { path: "item/:id", component: ItemDetailComponent },
-    { path: "landing", component: TitleComponent },
-    { path: "main", component: HomeComponent },
+    { path: "title", component: TitleComponent },
+    { path: "home", component: HomeComponent },
     { path: "heartrate", component: HeartrateCheckerComponent },
     { path: "emotion/:name", component: EmotionComponent },
     { path: 'resources/:emotion/:section', component: ResourceListComponent },
