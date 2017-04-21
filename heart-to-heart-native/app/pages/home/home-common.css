@@ -6,16 +6,17 @@ Label {
 }
 
 .home-container {
-    background-color: #666;
+    background-color: #eee;
     padding: 5;
 }
 
 .button {
     margin: 5;
-    border-radius: 8;
+    border-radius: 3;
     box-shadow: 0 3 6 #333;
 }
 
 .button-icon {
     font-size: 80;
+    margin-bottom: 5;
 }
