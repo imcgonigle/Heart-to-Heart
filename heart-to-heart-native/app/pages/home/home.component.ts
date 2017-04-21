@@ -12,6 +12,7 @@ import { FirebaseService } from '../../services/firebase.service';
 })
 
 export class HomeComponent {
+
   constructor(
     private page: Page, 
     private router: Router,
@@ -19,7 +20,6 @@ export class HomeComponent {
   ) {}
 
   ngOnInit() {
-    this.page.backgroundColor = new Color("#efefef");
   }
 
   login() {
