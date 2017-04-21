@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class TitleComponent {
   constructor(private router: Router){}
 
-  getStarted() {
-    this.router.navigate(['/main']);
+  goto(page: string) {
+    this.router.navigate([page]);
   }
 }
