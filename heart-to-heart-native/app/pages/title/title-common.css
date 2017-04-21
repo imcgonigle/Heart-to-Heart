@@ -1,33 +1,30 @@
 StackLayout {
-    margin-left: 15;
-    margin-right: 15;
-    margin-bottom: 50;
-    margin-top: 50;
-    padding-bottom: 15;
-    background-color: #dd7777;
-}
-
-Label {
-    horizontal-align: center;
+    padding: 20;
+    vertical-align: center;
+    background-color: #f0f0f0;
 }
 
 .app-title {
-    height: 150;
-    margin-right: 20;
-    margin-left: 20;
-    font-size: 50;
-    background-color: red;
+    width: 100%;
+    font-size: 70;
+    font-weight: bold;
+    color: #1cb0f6;
 }
 
 .app-logo {
-    height: 250;
-    width: auto;
+    height: 350;
+    width: 100%;
+    background-color: #ccf;
     margin: 20;
-    background-color: blue;
 }
 
 Button {
-    width: 80%;
-    font-size: 30;
-    background-color: white;
+    margin: 30;
+    margin-bottom: 100;
+    padding: 10;
+    border-radius: 20%;
+    font-size: 20;
+    font-weight: bold;
+    color: #f0f0f0;
+    background-color: #1cb0f6;
 }
