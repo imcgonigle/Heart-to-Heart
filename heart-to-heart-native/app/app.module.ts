@@ -15,13 +15,19 @@ import { ResourceListComponent } from './pages/resource/resource-list/resource-l
 import { ResourceDetailComponent } from './pages/resource/resource-detail/resource-detail.component';
 import { EmojiGameComponent } from './pages/emoji-game/emoji-game.component';
 
+// Used for making it easier to add fonts
+import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
+
 @NgModule({
     bootstrap: [
         AppComponent
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        TNSFontIconModule.forRoot({
+            'fa': './assets/font-awesome.css'
+        })
     ],
     declarations: [
         AppComponent,
