@@ -1,4 +1,21 @@
 Label {
     horizontal-align: center;
     vertical-align: center;
+    font-size: 20;
+    color: #fefefe;
+}
+
+.home-container {
+    background-color: #666;
+    padding: 5;
+}
+
+.button {
+    margin: 5;
+    border-radius: 8;
+    box-shadow: 0 3 6 #333;
+}
+
+.button-icon {
+    font-size: 80;
 }
