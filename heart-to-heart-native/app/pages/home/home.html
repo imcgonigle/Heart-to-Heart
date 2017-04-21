@@ -1,21 +1,41 @@
-<GridLayout columns="*,*" class="container" height="75%" width="100%">
-    <GridLayout rows="*,*" col="0">
-        <StackLayout (tap)="goto('/emotion/relaxing')" row="0" style.backgroundColor="yellow">
-            <Label text="Relax"></Label>
-        </StackLayout>
-        <StackLayout (tap)="goto('/emoji')" row="1" style.backgroundColor="pink">
-            <Label text="Emoji Game"></Label>
-        </StackLayout>
-    </GridLayout>
-    <GridLayout rows="*, 2*, *" col="1">
-        <StackLayout (tap)="goto('/emotion/happy')" row="0" style.backgroundColor="red">
-            <Label text="Happy"></Label>
-        </StackLayout>
-        <StackLayout (tap)="goto('/emotion/satisfying')" row="1" style.backgroundColor="green">
-            <Label text="Satisfying"></Label>
-        </StackLayout>
-        <StackLayout (tap)="login()" row="2" style.backgroundColor="blue">
-            <Label text="Login"></Label>
-        </StackLayout>
+<ActionBar title="Dashboard" class="action-bar">
+    <NavigationButton icon="res://ic_arrow_back_black_24dp" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<GridLayout class="home-container">
+    <GridLayout columns="*,*" height="90%" width="100%">
+        <GridLayout rows="*,*" col="0">
+            <GridLayout rows="*" class="button" (tap)="goto('/emotion/relaxing')" row="0" style.backgroundColor="#ffc715">
+                <StackLayout verticalAlignment="center" row="0">
+                    <Label class="fa button-icon" [text]="'fa-coffee' | fonticon"></Label>
+                    <Label text="Relax"></Label>
+                </StackLayout>
+            </GridLayout>
+            <GridLayout rows="*" class="button" (tap)="goto('/emotion/relaxing')" row="1" style.backgroundColor="#a560e8">
+                <StackLayout verticalAlignment="center" row="0">
+                    <Label class="fa button-icon" [text]="'fa-gamepad' | fonticon"></Label>
+                    <Label text="Emoji Game"></Label>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
+        <GridLayout rows="*, 2*, *" col="1">
+            <GridLayout rows="*" class="button" (tap)="goto('/emotion/happy')" row="0" style.backgroundColor="#14d4f4">
+                <StackLayout verticalAlignment="center" row="0">
+                    <Label class="fa button-icon" [text]="'fa-first-order' | fonticon"></Label>
+                    <Label text="Happy"></Label>
+                </StackLayout>
+            </GridLayout>
+            <GridLayout rows="*" class="button" (tap)="goto('/emotion/satisfying')" row="1" style.backgroundColor="#8ee000">
+                <StackLayout verticalAlignment="center" row="0">
+                    <Label class="fa button-icon" [text]="'fa-rebel' | fonticon"></Label>
+                    <Label text="Satisfying"></Label>
+                </StackLayout>
+            </GridLayout>
+            <GridLayout rows="*" class="button" (tap)="login()" row="2" style.backgroundColor="#e53838">
+                <StackLayout verticalAlignment="center" row="0">
+                    <Label class="fa button-icon" [text]="'fa-heartbeat' | fonticon"></Label>
+                    <Label text="Heart Rate"></Label>
+                </StackLayout>
+            </GridLayout>
+        </GridLayout>
     </GridLayout>
 </GridLayout>
