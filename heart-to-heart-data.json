@@ -1,0 +1,70 @@
+{
+    "resources": {
+        "happy": {
+            "pictures": [{
+                "description": "This is a happy picture",
+                "title": "Happy picture 1"
+            }, {
+                "description": "This is another happy picture",
+                "title": "Happy picture 2"
+            }, {
+                "description": "This is a third happy picture",
+                "title": "Happy picture 3"
+            }],
+            "videos": [{
+                "description": "This is a happy video",
+                "title": "Happy video one"
+            }, {
+                "description": "This is also a happy video",
+                "title": "Happy video 2"
+            }, {
+                "description": "This is a third happy video",
+                "title": "Happy video 3"
+            }]
+        },
+        "relaxing": {
+            "pictures": [{
+                "description": "This is a relaxing picture",
+                "title": "relaxing picture 1"
+            }, {
+                "description": "This is another relaxing picture",
+                "title": "relaxing picture 2"
+            }, {
+                "description": "This is a third relaxing picture",
+                "title": "relaxing picture 3"
+            }],
+            "videos": [{
+                "description": "This is a relaxing video",
+                "title": "relaxing video one"
+            }, {
+                "description": "This is also a relaxing video",
+                "title": "relaxing video 2"
+            }, {
+                "description": "This is a third relaxing video",
+                "title": "relaxing video 3"
+            }]
+        },
+        "satisfying": {
+            "pictures": [{
+                "description": "This is a satisfying picture",
+                "title": "satisfying picture 1"
+            }, {
+                "description": "This is another satisfying picture",
+                "title": "satisfying picture 2"
+            }, {
+                "description": "This is a third satisfying picture",
+                "title": "satisfying picture 3"
+            }],
+            "videos": [{
+                "description": "This is a satisfying video",
+                "title": "satisfying video one"
+            }, {
+                "description": "This is also a satisfying video",
+                "title": "satisfying video 2"
+            }, {
+                "description": "This is a third satisfying video",
+                "title": "satisfying video 3"
+            }]
+        }
+    }
+}
