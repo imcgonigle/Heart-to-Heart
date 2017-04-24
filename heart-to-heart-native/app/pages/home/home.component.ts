@@ -13,14 +13,26 @@ import { FirebaseService } from '../../services/firebase.service';
 
 export class HomeComponent {
 
+  pages: any = {
+    relax: {
+      title: "Relax",
+      description: "Here you can relax and unwind, if you are upset or just looking to be calm"
+    },
+    happy: {
+      title: "Happy",
+      description: "Here you can watch videos and look at pictures to make you happy."
+    },
+    Satisfying: {
+      title: "Satisfying",
+      description: "Here you can see videos and pictures that will satisfy your heart."
+    }
+  }
+
   constructor(
     private page: Page, 
     private router: Router,
     private firebaseService: FirebaseService
   ) {}
-
-  ngOnInit() {
-  }
 
   login() {
     this.firebaseService.login();
