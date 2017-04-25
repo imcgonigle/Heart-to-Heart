@@ -1,10 +1,17 @@
-Label {
-    horizontal-align: center;
+Button {
+    color: #f0f0f0;
+    font-size: 30;
+    font-weight: bold;
 }
 
-Button {
-    height: 75;
-    margin-bottom: 20;
-    font-size: 20;
-    background-color: #fefefe;
+.emotion-title {
+    margin-top: 15;
+    font-size: 38;
+    font-weight: bold;
+    color: #4c4c4c;
+}
+
+.emotion-description {
+    margin: 20;
+    color: #6f6f6f;
 }

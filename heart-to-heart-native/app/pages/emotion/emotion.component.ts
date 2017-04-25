@@ -10,8 +10,21 @@ import { Color } from 'color';
 })
 
 export class EmotionComponent {
-  name: string;
-  description: string;
+  emotions: any = {
+    relaxing: {
+      title: "Relax",
+      description: "Here you can relax and unwind, if you are upset or just looking to be calm."
+    },
+    happy: {
+      title: "Happy",
+      description: "Here you can watch videos and look at pictures to make you happy."
+    },
+    satisfying: {
+      title: "Satisfying",
+      description: "Here you can see videos and pictures that will satisfy your heart."
+    }
+  }
+  emotion: any;
 
   constructor(
     private router: Router,
@@ -20,8 +33,7 @@ export class EmotionComponent {
   ){}
 
   ngOnInit(): void{
-    this.name = this.route.snapshot.params['name'];
-    this.description = `This is the ${this.name} page`;
+    this.emotion = this.emotions[this.route.snapshot.params['name']];
     this.page.backgroundColor = new Color('#88dd66');
   }
 
