@@ -13,15 +13,18 @@ export class EmotionComponent {
   emotions: any = {
     relaxing: {
       title: "Relax",
-      description: "Here you can relax and unwind, if you are upset or just looking to be calm."
+      description: "Here you can relax and unwind, if you are upset or just looking to be calm.",
+      path: '/resources/relaxing/'
     },
     happy: {
       title: "Happy",
-      description: "Here you can watch videos and look at pictures to make you happy."
+      description: "Here you can watch videos and look at pictures to make you happy.",
+      path: '/resources/happy/'
     },
     satisfying: {
       title: "Satisfying",
-      description: "Here you can see videos and pictures that will satisfy your heart."
+      description: "Here you can see videos and pictures that will satisfy your heart.",
+      path: '/resources/satisfying/'
     }
   }
   emotion: any;
